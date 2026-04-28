@@ -5,25 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Social links profile</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .main{
-      display: flex;
-    background-color:hsl(0, 0%, 8%);
+    :root {
+     --bg-main: #141414;
+     --bg-card: #1f1f1f;
+     --bg-button: #333333;
+     --bg-button-hover: #c5f82a;
+     --text-main: #ffffff;
+     --text-location: #c5f82a;
+     --text-bio: #b3b3b3;
+     --text-button-hover: #333333;
+   }
+
+
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+
+   body {
+     background-color: var(--bg-main);
+     color: var(--text-main);
+     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     padding: 24px;
+     -webkit-font-smoothing: antialiased;
+   }
+
+
+   .main {
+     background-color: var(--bg-card);
      border-radius: 12px;
      padding: 40px;
-     width: 400px;
+     width: 100%;
+     max-width: 384px;
      text-align: center;
-     margin: 0;
+     
+   }
 
-    }
-    .img {
-     width: 80px;
-     height: 80px;
+
+   .img {
+     width: 88px;
+     height: 88px;
      border-radius: 50%;
+     object-fit: cover;
      margin-bottom: 24px;
    }
 
@@ -48,13 +85,39 @@
      font-size: 14px;
      margin-bottom: 24px;
    }
+
+
+   .links {
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+   }
+
+
+   .link-button {
+     background-color: red;
+     color: var(--text-main);
+     text-decoration: none;
+     padding: 16px;
+     border-radius: 8px;
+     font-weight: 600;
+     font-size: 14px;
+     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+   }
+
+
+   .link-button:hover {
+     background-color: var(--bg-button-hover);
+     color: var(--text-button-hover);
+     transform: translateY(-2px);
+   }
   </style>
 </head>
 <body>
 
  <div class="main"> 
   
-   <img src="assets/images/avatar-jessica.jpeg" alt="Profile Picture" class="img">
+   <img src="assets/images/MyPhoto.jpeg" alt="Profile Picture" class="img">
 
    <h1 class="name">Obada jaber</h1>
 
@@ -76,11 +139,5 @@
      <a href="#" class="link-button" target="_blank">instagrm</a>
    </div>
    </div>
-
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
 </body>
 </html>
